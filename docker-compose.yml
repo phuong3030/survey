@@ -4,8 +4,8 @@ services:
     image: postgres:alpine
     volumes:
       - ./tmp/db:/var/lib/postgresql/data
-    environment:
-      POSTGRES_HOST_AUTH_METHOD: trust
+    env_file:
+      - .env/development/database
   web:
     build: .
     volumes:
@@ -14,3 +14,6 @@ services:
       - "3000:3000"
     depends_on:
       - db
+    env_file:
+      - .env/development/database
+      - .env/development/web
