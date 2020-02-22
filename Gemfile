@@ -22,6 +22,8 @@ group :test do
   gem 'faker', '2.10.2'
   gem 'factory_bot_rails', '5.1.1'
   gem 'database_cleaner', '1.8.3'
+  gem 'shoulda', '2.11.3'
+  gem 'shoulda-matchers', '4.3.0'
 end
 
 group :development do
