@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_22_040436) do
+ActiveRecord::Schema.define(version: 2020_02_22_132412) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "profiles", force: :cascade do |t|
+    t.bigint "respondent_id", null: false
+    t.string "gender"
+    t.string "department"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["respondent_id"], name: "index_profiles_on_respondent_id"
+  end
 
   create_table "questions", force: :cascade do |t|
     t.string "prompt"
@@ -23,4 +32,27 @@ ActiveRecord::Schema.define(version: 2020_02_22_040436) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "questions_surveys", id: false, force: :cascade do |t|
+    t.bigint "survey_id", null: false
+    t.bigint "question_id", null: false
+    t.string "body"
+    t.string "type"
+    t.index ["survey_id", "question_id"], name: "index_surveys_questions", unique: true
+  end
+
+  create_table "respondents", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "surveys", force: :cascade do |t|
+    t.bigint "respondent_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["respondent_id"], name: "index_surveys_on_respondent_id"
+  end
+
+  add_foreign_key "profiles", "respondents"
 end
