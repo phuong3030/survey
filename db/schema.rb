@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 2020_02_22_132412) do
     t.bigint "question_id", null: false
     t.string "body"
     t.string "type"
-    t.index ["survey_id", "question_id"], name: "index_surveys_questions", unique: true
+    t.index ["survey_id", "question_id"], name: "index_surveys_questions"
   end
 
   create_table "respondents", force: :cascade do |t|
@@ -48,11 +48,12 @@ ActiveRecord::Schema.define(version: 2020_02_22_132412) do
   end
 
   create_table "surveys", force: :cascade do |t|
-    t.bigint "respondent_id"
+    t.bigint "respondent_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["respondent_id"], name: "index_surveys_on_respondent_id"
   end
 
   add_foreign_key "profiles", "respondents"
+  add_foreign_key "surveys", "respondents"
 end
