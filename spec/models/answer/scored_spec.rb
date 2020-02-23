@@ -12,7 +12,7 @@ RSpec.describe Answer::Scored, type: :model do
     end
 
     context 'optional question' do
-      it { is_expected.not_to validate_inclusion_of(:numeric_body).in_array(Answer::Scored::VALID_ANSWER) }
+      it { is_expected.not_to validate_inclusion_of(:body).in_array(Answer::Scored::VALID_ANSWER) }
     end
 
     it 'must correct question type' do

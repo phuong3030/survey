@@ -6,6 +6,8 @@ module Answer
     belongs_to :question, class_name: "Question::Base"
     belongs_to :survey
 
+    accepts_nested_attributes_for :question
+
     validate :correct_question_type
     before_save { |answer|
       answer.type = "Answer::#{self.question.class.name.demodulize}"

@@ -12,7 +12,7 @@ FactoryBot.define do
   end
 
   factory :survey do
-    respondent
+    association :respondent, strategy: :build, factory: :respondent
   end
 
   factory :question, class: "Question::Base" do

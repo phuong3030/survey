@@ -32,12 +32,12 @@ ActiveRecord::Schema.define(version: 2020_02_22_132412) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "questions_surveys", id: false, force: :cascade do |t|
-    t.bigint "survey_id", null: false
-    t.bigint "question_id", null: false
+  create_table "questions_surveys", force: :cascade do |t|
+    t.integer "survey_id"
+    t.integer "question_id"
     t.string "body"
     t.string "type"
-    t.index ["survey_id", "question_id"], name: "index_surveys_questions"
+    t.index ["survey_id", "question_id"], name: "index_surveys_questions", unique: true
   end
 
   create_table "respondents", force: :cascade do |t|
