@@ -6,6 +6,7 @@ ruby '2.6.5'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 4.1'
+gem 'rabl', '0.14.2'
 
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'tzinfo-data', '1.2019.3'
@@ -22,6 +23,8 @@ group :test do
   gem 'faker', '2.10.2'
   gem 'factory_bot_rails', '5.1.1'
   gem 'database_cleaner', '1.8.3'
+  gem 'shoulda', '2.11.3'
+  gem 'shoulda-matchers', '4.3.0'
 end
 
 group :development do

@@ -24,6 +24,7 @@ docker-compose up -d --build
 docker-compose run web rake db:create
 docker-compose run web rake db:migrate
 
+export DATABASE_HOST=localhost DATABASE_PASSWORD=password DATABASE_USER=postgres DATABASE_DB=survey_development
 
 
 * ...

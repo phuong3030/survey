@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :respondents
+  resources :questions
+  resources :surveys do
+    get :answer_scored_average, on: :collection
+  end
 end
