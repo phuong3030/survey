@@ -1,0 +1,499 @@
+{
+	"info": {
+		"_postman_id": "6c835ade-1018-4ac3-bdd6-fb11a8896d7e",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create respondent",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"respondent\": {\n\t\t\"first_name\": \"Phuong\",\n\t\t\"last_name\": \"Tran Tuan\",\n\t\t\"profile_attributes\": {\n\t\t\t\"gender\": \"Male\",\n\t\t\t\"department\": \"Sales\"\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.63.133:3000/respondents",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"63",
+						"133"
+					],
+					"port": "3000",
+					"path": [
+						"respondents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List respondents",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"respondent\": {\n\t\t\"first_name\": \"Phuong\",\n\t\t\"last_name\": \"Tran Tuan\",\n\t\t\"profile_attributes\": {\n\t\t\t\"gender\": \"Male\",\n\t\t\t\"department\": \"Sales\"\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.63.133:3000/respondents",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"63",
+						"133"
+					],
+					"port": "3000",
+					"path": [
+						"respondents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show a respondent",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"respondent\": {\n\t\t\"first_name\": \"Phuong\",\n\t\t\"last_name\": \"Tran Tuan\",\n\t\t\"profile_attributes\": {\n\t\t\t\"gender\": \"Male\",\n\t\t\t\"department\": \"Sales\"\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.63.133:3000/respondents/1",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"63",
+						"133"
+					],
+					"port": "3000",
+					"path": [
+						"respondents",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a respondent",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"respondent\": {\n\t\t\"first_name\": \"Phuong\",\n\t\t\"last_name\": \"Tran Tuan\",\n\t\t\"profile_attributes\": {\n\t\t\t\"gender\": \"Male\",\n\t\t\t\"department\": \"Sales\"\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.63.133:3000/respondents/3",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"63",
+						"133"
+					],
+					"port": "3000",
+					"path": [
+						"respondents",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a respondent",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"respondent\": {\n\t\t\"first_name\": \"Phuong1\"\n\t\t\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.63.133:3000/respondents/2",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"63",
+						"133"
+					],
+					"port": "3000",
+					"path": [
+						"respondents",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create questions",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"question\": {\n\t\t\"prompt\": \"question 1\",\n\t\t\"type\": \"scored\"\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.63.133:3000/questions",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"63",
+						"133"
+					],
+					"port": "3000",
+					"path": [
+						"questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List questions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.63.133:3000/questions",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"63",
+						"133"
+					],
+					"port": "3000",
+					"path": [
+						"questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show a question",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.63.133:3000/questions/1",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"63",
+						"133"
+					],
+					"port": "3000",
+					"path": [
+						"questions",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a question",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.63.133:3000/questions/1",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"63",
+						"133"
+					],
+					"port": "3000",
+					"path": [
+						"questions",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a question",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"prompt\": \"question 2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.63.133:3000/questions/2",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"63",
+						"133"
+					],
+					"port": "3000",
+					"path": [
+						"questions",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List surveys",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.63.133:3000/surveys",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"63",
+						"133"
+					],
+					"port": "3000",
+					"path": [
+						"surveys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show a survey",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.63.133:3000/surveys/1",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"63",
+						"133"
+					],
+					"port": "3000",
+					"path": [
+						"surveys",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a survey",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"survey\": {\n        \"respondent_attributes\": {\n            \"first_name\": \"Phuong\",\n            \"last_name\": \"Tran\",\n            \"profile_attributes\": {\n                \"gender\": \"Male\",\n                \"department\": \"Product development\"\n            }\n        },\n        \"questions_attributes\": [\n            {\n                \"prompt\": \"Question 1\",\n                \"type\": \"Question::Scored\",\n                \"optional\": \"0\"\n            },\n            {\n                \"prompt\": \"Question 2\",\n                \"type\": \"Question::Scored\",\n                \"optional\": \"0\"\n            },\n            {\n                \"prompt\": \"Question 3\",\n                \"type\": \"Question::OpenEnded\",\n                \"optional\": \"1\"\n            }\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.63.133:3000/surveys",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"63",
+						"133"
+					],
+					"port": "3000",
+					"path": [
+						"surveys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Answer the survey / Update the survey",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"answers_attributes\": [\n        {\n        \t\"id\": 6,\n            \"body\": \"1\"\n        },\n        {\n        \t\"id\": 7,\n            \"body\": \"1\"\n        },\n        {\n        \t\"id\": 8,\n            \"body\": \"answer\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.63.133:3000/surveys/3",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"63",
+						"133"
+					],
+					"port": "3000",
+					"path": [
+						"surveys",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Averaged response scores for all scored questions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.63.133:3000/surveys/answer_scored_average",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"63",
+						"133"
+					],
+					"port": "3000",
+					"path": [
+						"surveys",
+						"answer_scored_average"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
