@@ -37,7 +37,6 @@ ActiveRecord::Schema.define(version: 2020_02_22_132412) do
     t.integer "question_id"
     t.string "body"
     t.string "type"
-    t.index ["survey_id", "question_id"], name: "index_surveys_questions", unique: true
   end
 
   create_table "respondents", force: :cascade do |t|
