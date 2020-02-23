@@ -9,7 +9,7 @@ class RespondentsController < ApplicationController
     @respondent = Respondent.new(respondent_params)
 
     if @respondent.save
-      render("respondents/show.rabl", object: @respondent, status: :created).html_safe
+      render("respondents/show.rabl", object: @respondent, status: :created, location: @question).html_safe
     else
       render("respondents/show.rabl", object: @respondent, status: :unprocessable_entity).html_safe
     end
