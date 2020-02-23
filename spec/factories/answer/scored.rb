@@ -24,14 +24,15 @@ FactoryBot.define do
 
   factory :answer, class: "Answer::Base" do
     survey
-    question
   end
 
   factory :scored_answer, parent: :answer, class: "Answer::Scored" do
     numeric_body { Faker::Number.within(range: 1..5) }
+    association :question, strategy: :create, factory: :scored_question
   end
 
   factory :open_ended_answer, parent: :answer, class: "Answer::OpenEnded" do
     body { Faker::Lorem.sentence(word_count: 3) }
+    association :question, strategy: :create, factory: :open_ended_question
   end
 end

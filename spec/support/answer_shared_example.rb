@@ -5,6 +5,8 @@ shared_examples "Answer class" do
     expect(subject).to have_attribute :type
   end
 
-  it { should belong_to(:question) }
-  it { should belong_to(:survey) }
+  describe 'Associations' do
+    it { should belong_to(:question).without_validating_presence  }
+    it { should belong_to(:survey) }
+  end
 end
